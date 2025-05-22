@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find My Device - Mr SMILE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Find My Phone/Email</h1>
+
+    <div id="auth">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <h2>Welcome, <span id="userEmail"></span></h2>
+      <button onclick="saveLocation()">Save Current Location</button>
+      <h3>Last Known Location:</h3>
+      <pre id="locationData">None</pre>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
